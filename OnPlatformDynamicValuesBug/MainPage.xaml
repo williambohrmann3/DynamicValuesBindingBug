@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="OnPlatformDynamicValuesBug.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Label Text="AppThemeBinding: THIS TEXT SHOULD BE ORANGE BY DEFAULT" TextColor="{AppThemeBinding Default={Binding Text_Color}}" />
+
+            <Label Text="OnPlatform: THIS TEXT SHOULD BE BLUE ON ANDROID AND ORANGE ELSEWHERE" TextColor="{OnPlatform Android=Blue, Default={Binding Text_Color}}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
