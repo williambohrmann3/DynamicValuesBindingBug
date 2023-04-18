@@ -6,15 +6,14 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label Text="OnPlatform: this text should be blue on Android and orange elsewhere" TextColor="{OnPlatform Android=Blue, Default={Binding Text_Color}}" />
-            
-            <Label Text="OnPlatform: this text should be blue on Android and orange elsewhere. This does not use OnPlatform extension." TextColor="{Binding Text_Color}" />
-            
-            <CheckBox IsChecked="{OnPlatform Default={Binding Is_Checked}}" HorizontalOptions="End"/>
+
+            <Label Text="This text color property does not use OnPlatform extension." TextColor="{Binding Text_Color}" />
+
+            <CheckBox HorizontalOptions="End" IsChecked="{OnPlatform Default={Binding Is_Checked}}" />
 
             <Picker ItemsSource="{OnPlatform Default={Binding Items_Source}}" />
 
             <Button BorderColor="Green" BorderWidth="{OnPlatform Default={Binding Border_Width}}" />
-
         </VerticalStackLayout>
     </ScrollView>
 
