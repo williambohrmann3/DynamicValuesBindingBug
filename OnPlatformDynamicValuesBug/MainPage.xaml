@@ -5,10 +5,9 @@
 
     <ScrollView>
         <VerticalStackLayout>
+            <Label Text="OnPlatform: this text should be blue on Android and orange elsewhere" TextColor="{OnPlatform Android=Blue, Default={Binding Text_Color}}" />
 
-            <Label Text="AppThemeBinding: THIS TEXT SHOULD BE ORANGE BY DEFAULT" TextColor="{AppThemeBinding Default={Binding Text_Color}}" />
-
-            <Label Text="OnPlatform: THIS TEXT SHOULD BE BLUE ON ANDROID AND ORANGE ELSEWHERE" TextColor="{OnPlatform Android=Blue, Default={Binding Text_Color}}" />
+            <Picker ItemsSource="{OnPlatform Default={Binding Items_Source}}" />
 
         </VerticalStackLayout>
     </ScrollView>
