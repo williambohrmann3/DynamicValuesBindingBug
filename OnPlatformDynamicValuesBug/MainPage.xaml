@@ -7,7 +7,11 @@
         <VerticalStackLayout>
             <Label Text="OnPlatform: this text should be blue on Android and orange elsewhere" TextColor="{OnPlatform Android=Blue, Default={Binding Text_Color}}" />
 
+            <CheckBox IsChecked="{OnPlatform Default={Binding Is_Checked}}" HorizontalOptions="End"/>
+
             <Picker ItemsSource="{OnPlatform Default={Binding Items_Source}}" />
+
+            <Button BorderColor="Green" BorderWidth="{OnPlatform Default={Binding Border_Width}}" />
 
         </VerticalStackLayout>
     </ScrollView>
